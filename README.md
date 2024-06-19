@@ -2,7 +2,7 @@
 
 My simple neovim configuration file
 
-![preview](https://github.com/k-hubs-k/nvim/assets/screenshot.png)
+![preview](assets/screenshot.png)
 
 ## Files structure
 
