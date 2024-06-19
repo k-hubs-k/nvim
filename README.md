@@ -16,3 +16,6 @@ My simple neovim configuration file
     │       └── lsp
     └── utils
 ```
+
+> [!Note]
+> Don't forget to run `:checkhealth` command in neovim console after cloning this repo and opening neovim for the first time
