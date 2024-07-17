@@ -1,4 +1,5 @@
 local format = require("utils.icons").format
+local fmt = require("utils.icons").fmt
 return {
   "nvim-telescope/telescope.nvim",
   branch = "0.1.x",
@@ -15,6 +16,8 @@ return {
     telescope.setup({
       defaults = {
         path_directory = { "smart" },
+        prompt_prefix = fmt("Insert", " "),
+        selection_caret = fmt("Right", ""),
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result

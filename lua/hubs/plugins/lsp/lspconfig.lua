@@ -84,12 +84,32 @@ return {
           capabilities = capabilities,
           settings = {
             Lua = {
-              -- make the language server recognize "vim" global
+              hint = {
+                enable = true,
+              },
               diagnostics = {
                 globals = { "vim" },
               },
+              workspace = {
+                library = {
+                  "/usr/local/share/nvim/runtime/lua",
+                  "~/.local/share/nvim/lazy/neodev.nvim/types/stable",
+                },
+              },
               completion = {
                 callSnippet = "Replace",
+              },
+            },
+          },
+        })
+      end,
+      ["cssls"] = function()
+        lspconfig["cssls"].setup({
+          capabilities = capabilities,
+          settings = {
+            css = {
+              lint = {
+                unknownAtRules = "ignore",
               },
             },
           },
@@ -105,7 +125,13 @@ return {
       ["html"] = function()
         lspconfig["html"].setup({
           capabilities = capabilities,
-          filetypes = { "html", "php" },
+          filetypes = { "html" },
+        })
+      end,
+      ["emmet_language_server"] = function()
+        lspconfig["emmet_language_server"].setup({
+          capabilities = capabilities,
+          filetypes = { "html", "php", "javascript" },
         })
       end,
     })

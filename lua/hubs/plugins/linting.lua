@@ -9,7 +9,7 @@ return {
       typescript = { "eslint_d" },
       javascriptreact = { "eslint_d" },
       typescriptreact = { "eslint_d" },
-      python = { "pylint" },
+      python = { "ruff" },
       php = { "phpmd" },
       cs = { "ast_grep" },
     }
@@ -18,13 +18,9 @@ return {
 
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
       group = lint_augroup,
-      callback = function()
-        lint.try_lint()
-      end,
+      callback = function() lint.try_lint() end,
     })
 
-    vim.keymap.set("n", "<leader>l", function()
-      lint.try_lint()
-    end, { desc = "Trigger linting for current file" })
+    vim.keymap.set("n", "<leader>l", function() lint.try_lint() end, { desc = "Trigger linting for current file" })
   end,
 }

@@ -16,6 +16,9 @@ keymap.set("n", "<leader>q", ":q<CR>", opts)
 opts.desc = format("Exit", "Quit!")
 keymap.set("n", "<leader>Q", ":q!<CR>", opts)
 
+opts.desc = format("Exit", "Quit!")
+keymap.set("n", "<leader>Q", ":q!<CR>", opts)
+
 opts.desc = format("Insert", "Exit insert mode")
 keymap.set("i", "jk", "<ESC>", opts)
 keymap.set("i", "jj", "<ESC>", opts)
@@ -62,6 +65,9 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", opts)
 opts.desc = format("NewFile", "Open new buffer in new tab")
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", opts)
 
+opts.desc = format("Error", "Close current buffer")
+keymap.set("n", "<leader>bd", "<cmd>BufDel<CR>", opts)
+
 opts.desc = format("FileTree", "Open file explorer")
 keymap.set("n", "<leader>o", "<cmd>Neotree focus<CR>", opts)
 
@@ -92,3 +98,30 @@ keymap.set("n", "<leader>L", ":Lazy<CR>", opts)
 
 opts.desc = format("Home", "Home")
 keymap.set("n", "<leader><CR>", ":Alpha<CR>", opts)
+
+-- Bufferline
+opts.desc = format("Left", "Previous buffer")
+keymap.set("n", "<leader>1", ":BufferLineCyclePrev<CR>", opts)
+
+opts.desc = format("Right", "Next buffer")
+keymap.set("n", "<leader>2", ":BufferLineCycleNext<CR>", opts)
+
+opts.desc = format("Window", "Pick buffer")
+keymap.set("n", "<leader>bp", ":lua require('bufferline').pick()<CR>", opts)
+
+opts.desc = format("Visual", "Select All")
+keymap.set("n", "<C-a>", "ggVG", opts)
+
+opts.desc = format("Git", "Git")
+keymap.set("n", "<leader>go", ":Neogit<CR>", opts)
+
+opts.desc = format("Git", "Git option")
+keymap.set("n", "<leader>gc", ":Neogit commit<CR>", opts)
+
+-- dropbar
+opts.desc = format("Down", "Dropbar")
+keymap.set("n", "<leader>bo", ":lua require('dropbar.api').pick()<CR>", opts)
+
+-- other
+opts.desc = format("Definition", "Replace word")
+keymap.set({ "n", "v" }, "<leader>rw", ":lua require('ssr').open()<CR>", opts)

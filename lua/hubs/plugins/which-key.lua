@@ -11,6 +11,7 @@ return {
       e = { name = fmt("Windows", "Widow") },
       f = { name = fmt("Search", "Telescope") },
       g = { name = fmt("Git", "Git") },
+      h = { name = fmt("Git", "Gitsigns") },
       l = { name = fmt("Git", "Git") },
       m = { name = fmt("Code", "Format") },
       n = { name = fmt("Notification", "Notification") },

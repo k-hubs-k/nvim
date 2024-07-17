@@ -14,6 +14,12 @@ return {
           noremap = true,
           silent = true,
         })
+        local notify = require("notify")
+        notify.setup({
+          render = "minimal",
+          timeout = 2500,
+          top_down = false,
+        })
       end,
     },
   },

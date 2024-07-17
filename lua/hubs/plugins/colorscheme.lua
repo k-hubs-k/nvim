@@ -2,9 +2,7 @@ return {
   "folke/tokyonight.nvim",
   lazy = false,
   priority = 1000,
-  init = function()
-    vim.cmd.colorscheme("tokyonight-night")
-  end,
+  init = function() vim.cmd.colorscheme("tokyonight-night") end,
   opts = {
     styles = {
       keywords = { italic = false },
@@ -48,6 +46,7 @@ return {
         BufferLineDuplicate = { fg = c.comment, bg = c.bg, bold = true },
         BufferLineDuplicateSelected = { fg = c.fg, bg = c.bg, bold = true, italic = true },
         BufferLineTruncMarker = { bg = c.red },
+        BufferLineUnderline = { bg = c.red },
 
         NeoTreeDirectoryName = { fg = c.fg },
         NeoTreeNormalNC = { bg = c.bg },

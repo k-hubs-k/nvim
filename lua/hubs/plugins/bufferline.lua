@@ -7,16 +7,20 @@ return {
   opts = {
     options = {
       mode = "buffer",
-      separator_style = "slant",
+      -- separator_style = "slant",
 
       diagnostics = "nvim_lsp",
       diagnostics_update_in_insert = true,
       diagnostics_indicator = nil,
-      indicator = "none",
+      -- indicator = "none",
+      indicator = {
+        icon = "▎",
+        style = "icon",
+      },
       offsets = {
         {
-          filetype = "NvimTree",
-          text = format("Folder", "NvimTree"),
+          filetype = "neo-tree",
+          text = format("Folder", "neo-tree"),
           text_align = "left",
           separator = "│",
         },
